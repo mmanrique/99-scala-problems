@@ -6,13 +6,13 @@ class P03$Test extends FunSuite {
 
   test("Should get the nth element") {
     val list: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8)
-    val nth: Int = P03.nth(3, list)
+    val nth: Int = P03.nth(2, list)
     assert(nth == 3)
   }
 
   test("Shoulg get the last element") {
     val list: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8)
-    val nth: Int = P03.nth(8, list)
+    val nth: Int = P03.nth(7, list)
     assert(nth == 8)
   }
 
@@ -32,7 +32,7 @@ class P03$Test extends FunSuite {
   test("Should not try to get the 0th element") {
     val list: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8)
     try {
-      val nth: Int = P03.nth(0, list)
+      val nth: Int = P03.nth(-1, list)
       fail()
     }
     catch {
