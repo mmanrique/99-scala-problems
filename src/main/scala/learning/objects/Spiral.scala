@@ -27,7 +27,7 @@ object Spiral {
   }
 
   def main(args: Array[String]): Unit = {
-    val nSides = 25
+    val nSides: Int = 25
     println(spiral(nSides, 0))
   }
 }

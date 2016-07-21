@@ -1,6 +1,6 @@
 package learning.rationals
 
-class Rational(n: Int, d: Int) {
+class Rational(n: Int, d: Int) extends Ordered[Rational] {
   require(d != 0)
   private val g: Int = gcd(n.abs, d.abs)
   val numer: Int = n / g
@@ -59,4 +59,7 @@ class Rational(n: Int, d: Int) {
     case _ => false
   }
 
+  override def compare(that: Rational): Int = {
+    (this.numer * that.denom) - (that.numer * this.denom)
+  }
 }

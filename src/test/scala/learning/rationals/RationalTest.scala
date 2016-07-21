@@ -40,10 +40,18 @@ class RationalTest extends FunSuite {
     assert(first * second == new Rational(3, 7))
   }
 
-  test("Should divid two rationals") {
+  test("Should divide two rationals") {
     val first = new Rational(3, 4)
     val second = new Rational(4, 7)
     assert(first / second == new Rational(21, 16))
   }
+
+
+  test("SHould compare two Rationals") {
+    val first: Rational = new Rational(3, 4)
+    val second: Rational = new Rational(7, 8)
+    assert(first < second)
+  }
+
 
 }
